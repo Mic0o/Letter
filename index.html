@@ -26,11 +26,11 @@
     --ink: #3D5554;
     --ink-soft: #6B8281;
     --gold: #8BA8A7;
-    --parchment: #dcc9a8;
-    --parchment-dark: #c4b08a;
-    --parchment-edge: #8b7355;
-    --typewriter-ink: #2a2520;
-    --typewriter-red: #9b4a4a;
+    --parchment: #f2ded6;
+    --parchment-dark: #e0bfb4;
+    --parchment-edge: #a9786e;
+    --typewriter-ink: #4a332e;
+    --typewriter-red: #b06a5e;
   }
 
   *{ box-sizing: border-box; }
@@ -41,7 +41,7 @@
   body{
     font-family:'Cormorant Garamond', serif;
     color:var(--typewriter-ink);
-    background:linear-gradient(180deg, #f4f4f4 0%, #e8e4dc 100%);
+    background:linear-gradient(180deg, #faf3f0 0%, #f0e2da 100%);
     min-height:100vh;
     position:relative;
   }
@@ -133,41 +133,41 @@
   .env-body{
     position:absolute; inset:0;
     background:
-      radial-gradient(120% 120% at 10% 0%, rgba(255,255,255,0.35), transparent 60%),
-      linear-gradient(180deg, #e8dcc8, var(--parchment-dark));
+      radial-gradient(120% 120% at 10% 0%, rgba(255,255,255,0.45), transparent 60%),
+      linear-gradient(180deg, #f5e5de, var(--parchment-dark));
     border-radius:4px;
-    box-shadow: inset 0 0 0 1px rgba(139,115,85,0.2);
+    box-shadow: inset 0 0 0 1px rgba(169,120,110,0.2);
   }
   .env-body::after{
     content:"";
     position:absolute; inset:0; border-radius:4px;
     background-image:
-      repeating-linear-gradient(45deg, rgba(101,67,33,0.03) 0 2px, transparent 2px 6px);
+      repeating-linear-gradient(45deg, rgba(169,120,110,0.03) 0 2px, transparent 2px 6px);
     mix-blend-mode:multiply;
   }
 
   .env-pocket-back{
     position:absolute; left:0; right:0; bottom:0; height:100%;
     border-radius:4px;
-    background:linear-gradient(180deg, transparent 45%, rgba(139,115,85,0.12) 100%);
+    background:linear-gradient(180deg, transparent 45%, rgba(169,120,110,0.12) 100%);
   }
 
   .env-flap{
     position:absolute; top:0; left:0; right:0;
     height:120px;
-    background:linear-gradient(160deg, #d4c4a8, #b8a880 70%);
+    background:linear-gradient(160deg, #ecd3c8, #d9b3a4 70%);
     clip-path:polygon(0 0, 100% 0, 50% 78%);
     border-radius:4px 4px 0 0;
     transform-origin:top center;
     transform:rotateX(0deg);
     transition:transform 1.1s cubic-bezier(.65,0,.35,1);
-    box-shadow: inset 0 -2px 6px rgba(101,67,33,0.12);
+    box-shadow: inset 0 -2px 6px rgba(169,120,110,0.12);
     z-index:5;
   }
 
   .env-side-l, .env-side-r{
     position:absolute; top:0; bottom:0; width:50%;
-    background:linear-gradient(180deg, rgba(228,216,192,0.95), rgba(212,196,168,0.5));
+    background:linear-gradient(180deg, rgba(245,229,222,0.95), rgba(224,191,180,0.5));
   }
   .env-side-l{ left:0; clip-path:polygon(0 0, 0 100%, 50% 43%); }
   .env-side-r{ right:0; clip-path:polygon(100% 0, 100% 100%, 50% 43%); }
@@ -179,8 +179,8 @@
     transform:translateX(-50%);
     width:44px; height:44px;
     border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #c45c5c, #8b3a3a 75%);
-    box-shadow:0 3px 8px rgba(101,40,40,0.35), inset 0 1px 3px rgba(255,255,255,0.25);
+    background:radial-gradient(circle at 35% 30%, #d68f84, #a35c53 75%);
+    box-shadow:0 3px 8px rgba(140,80,70,0.35), inset 0 1px 3px rgba(255,255,255,0.25);
     display:flex; align-items:center; justify-content:center;
     font-size:0;
     z-index:6;
@@ -196,7 +196,7 @@
   .env-letter-peek{
     position:absolute; left:16px; right:16px; bottom:12px;
     height:0px;
-    background:linear-gradient(180deg, #ede0c8, var(--parchment));
+    background:linear-gradient(180deg, #f8ece5, var(--parchment));
     border-radius:2px 2px 0 0;
     box-shadow:0 -2px 8px rgba(0,0,0,0.1);
     transition:height 1s cubic-bezier(.22,1,.36,1) 0.7s, top 1s cubic-bezier(.22,1,.36,1) 0.7s;
@@ -296,22 +296,22 @@
     background-color:var(--parchment);
     background-image:
       url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E"),
-      radial-gradient(ellipse 120px 80px at 12% 18%, rgba(139,90,43,0.18) 0%, transparent 100%),
-      radial-gradient(ellipse 90px 70px at 88% 22%, rgba(101,67,33,0.14) 0%, transparent 100%),
-      radial-gradient(ellipse 140px 100px at 78% 82%, rgba(139,90,43,0.16) 0%, transparent 100%),
-      radial-gradient(ellipse 80px 60px at 22% 78%, rgba(101,67,33,0.12) 0%, transparent 100%),
-      radial-gradient(ellipse 60px 40px at 55% 45%, rgba(255,250,235,0.25) 0%, transparent 100%),
-      linear-gradient(175deg, #e8d5b5 0%, var(--parchment) 35%, #d4c0a0 70%, #c9b490 100%);
+      radial-gradient(ellipse 120px 80px at 12% 18%, rgba(169,120,110,0.16) 0%, transparent 100%),
+      radial-gradient(ellipse 90px 70px at 88% 22%, rgba(169,120,110,0.12) 0%, transparent 100%),
+      radial-gradient(ellipse 140px 100px at 78% 82%, rgba(169,120,110,0.14) 0%, transparent 100%),
+      radial-gradient(ellipse 80px 60px at 22% 78%, rgba(169,120,110,0.1) 0%, transparent 100%),
+      radial-gradient(ellipse 60px 40px at 55% 45%, rgba(255,250,247,0.3) 0%, transparent 100%),
+      linear-gradient(175deg, #f8e8e1 0%, var(--parchment) 35%, #ecd0c5 70%, #e0bcaf 100%);
   }
   .paper::before{
     content:"";
     position:absolute; inset:0;
     background:
-      radial-gradient(circle 3px at 18% 32%, rgba(80,50,20,0.25) 0%, transparent 100%),
-      radial-gradient(circle 2px at 72% 58%, rgba(80,50,20,0.2) 0%, transparent 100%),
-      radial-gradient(circle 4px at 45% 72%, rgba(80,50,20,0.18) 0%, transparent 100%),
-      radial-gradient(circle 2px at 85% 38%, rgba(80,50,20,0.22) 0%, transparent 100%),
-      radial-gradient(circle 3px at 30% 88%, rgba(80,50,20,0.15) 0%, transparent 100%);
+      radial-gradient(circle 3px at 18% 32%, rgba(150,95,80,0.2) 0%, transparent 100%),
+      radial-gradient(circle 2px at 72% 58%, rgba(150,95,80,0.16) 0%, transparent 100%),
+      radial-gradient(circle 4px at 45% 72%, rgba(150,95,80,0.14) 0%, transparent 100%),
+      radial-gradient(circle 2px at 85% 38%, rgba(150,95,80,0.18) 0%, transparent 100%),
+      radial-gradient(circle 3px at 30% 88%, rgba(150,95,80,0.12) 0%, transparent 100%);
     pointer-events:none;
     z-index:1;
   }
@@ -319,8 +319,8 @@
     content:"";
     position:absolute; inset:0;
     box-shadow:
-      inset 0 0 80px rgba(101,67,33,0.12),
-      inset 0 0 30px rgba(255,250,240,0.3);
+      inset 0 0 80px rgba(169,120,110,0.1),
+      inset 0 0 30px rgba(255,250,247,0.35);
     pointer-events:none;
     z-index:2;
   }
@@ -335,9 +335,9 @@
     top:-6px; left:-4px;
     width:72px; height:72px;
     background:
-      radial-gradient(circle at 75% 75%, #b8a080 0%, #9a8568 35%, #7a6548 60%, transparent 62%);
+      radial-gradient(circle at 75% 75%, #d9b3a4 0%, #c49685 35%, #a9786e 60%, transparent 62%);
     border-radius:0 0 85% 0;
-    box-shadow:4px 4px 14px rgba(0,0,0,0.2), inset -2px -2px 6px rgba(0,0,0,0.15);
+    box-shadow:4px 4px 14px rgba(0,0,0,0.15), inset -2px -2px 6px rgba(0,0,0,0.12);
     transform:rotate(-8deg);
   }
   .curl-tl::after{
@@ -345,7 +345,7 @@
     position:absolute; top:8px; left:8px;
     width:50px; height:50px;
     border-radius:0 0 80% 0;
-    background:linear-gradient(135deg, rgba(255,250,240,0.5), transparent 60%);
+    background:linear-gradient(135deg, rgba(255,250,247,0.55), transparent 60%);
   }
   .curl-bl{
     display:none;
@@ -376,7 +376,7 @@
   }
   .paper-fade-top{
     top:0;
-    background:linear-gradient(180deg, #dcc9a8 15%, rgba(220,201,168,0));
+    background:linear-gradient(180deg, #f2ded6 15%, rgba(242,222,214,0));
   }
   .paper-fade-bottom{
     display:none;
@@ -472,7 +472,7 @@
     padding:10px 28px;
     border-radius:2px;
     border:1px solid var(--parchment-edge);
-    background:linear-gradient(180deg, #ede0c8, var(--parchment-dark));
+    background:linear-gradient(180deg, #f8ece5, var(--parchment-dark));
     color:var(--typewriter-ink);
     cursor:pointer;
     box-shadow:0 4px 12px rgba(0,0,0,0.15);
@@ -490,7 +490,7 @@
     display:flex; flex-direction:column;
     align-items:center; justify-content:center;
     padding:32px 24px;
-    background:#b8d4e8;
+    background:#f2ddd4;
     opacity:0;
     pointer-events:none;
     transition:opacity 0.7s ease;
@@ -505,7 +505,7 @@
     font-size:clamp(0.88rem, 2.6vw, 1.05rem);
     line-height:1.85;
     text-align:center;
-    color:#1e3344;
+    color:#5c3d35;
     letter-spacing:0.02em;
     opacity:0;
     transform:translateY(12px);
@@ -668,12 +668,12 @@
         <div class="letter-date" id="letterDate"></div>
 
         <div class="letter-body" id="letterBody">
-          <p>Hi, je! I hope you're doing well. Hindi ko alam paano ko sisimulan itong letter haha. Maybe you're wondering bakit ako gumawa ng ganito or maybe bakit ako biglang nagmessage,
-            hindi ko rin alam haha pero I think it's now or never. Sabi nga sa kanta, "If we never try how will we know" hahaha kasalanan ito ni ryan at yeng e hahahaha jk. I just want to tell you that I admire you. I don't know how it started haha bigla na lang napapareact ako every time I see your stories on IG. I've always found you cute.
+          <p>Hi, je! I hope you're doing well. So I did this letter because... why not? haha kidding aside, hindi ko kasi alam paano ka ime-message ulit so ito yung naisip kong way para iapproach ka hehe. I just want to tell you that I admire you. I don't know how it started haha bigla na lang napapareact ako every time I see your stories on IG. I've always found you cute.
             Napapatitig lang ako sa pics mo and I can't help but smile. I don't know if you've noticed, but I always react to your stories.
-            Ayun lang biglang nagconfess e no hahahaha Actually, I think I already had a crush on you even before our last reunion (December) haha. Tuwang tuwa pa ako sa mga small interactions natin e hahaha. Mukhang hindi na ata ako aattend sa next reunion. Wala na akong kapal ng mukha na ihaharap HAHAHAHA.
-            I just want to let you know that I like you. I hope this doesn't make things awkward or make you uncomfortable . I hope you have a great day and take care always!
-            Can I ask a favor at the same time? Haha pwede ba let's keep it between us muna HAHAHA Okay lang naman ikuwento mo sa friends mo, huwag lang muna sa mga classmates natin pls hahahahaha. Ngayon pa lang nahihiya na ako   
+            Ayun lang biglang nagconfess e no hahaha ito na talaga yung naisip kong option, pasensya ka na.  Sorry if this feels random. Actually, I think I already had a crush on you even before our last reunion (December) haha. Tuwang tuwa pa ako sa mga small interactions natin e hahaha. Mukhang hindi na ata ako aattend sa next reunion. Kasalanan ito ni ryan at yeng e haha. Wala na akong kapal ng mukha na ihaharap HAHAHAHA.
+            I don't expect anything from you, I just want to let you know that I like you. I hope this doesn't make things awkward or make you uncomfortable. I hope you have a great day and take care always!
+            Can I ask a favor at the same time? Haha pwede ba let's keep it between us muna HAHAHA Okay lang naman ikuwento mo sa friends mo, huwag lang muna sa mga classmates natin pls hahahahaha. Ngayon pa lang nahihiya na ako.
+            Good luck sa law school. Study hard, but don’t forget to rest and enjoy the little things too. I’ll keep reacting to your stories, haha. Nag start na rin ata pasok ninyo for this school year. Ayun laanngg. Take care always! 
           </p>
 
         
@@ -699,7 +699,7 @@
 
   /* ---------------- Ambient decoration generation ---------------- */
   const ambient = document.getElementById('ambient');
-  const bokehColors = ['#dcc9a8','#c4b08a','#e8dcc8','#d4c4a8','#ede0c8'];
+  const bokehColors = ['#e8c4b8','#f0ddd6','#dcc0b8','#ecd9d2','#f5e6de'];
 
   function rand(min, max){ return Math.random() * (max - min) + min; }
 
